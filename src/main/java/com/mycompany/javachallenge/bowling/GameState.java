@@ -22,6 +22,10 @@ public class GameState {
         this.pinfalls = pinfalls;
     }
 
+    public GameState() {
+    }
+    
+
     public void change(int countRoll, int countFrame, int index, int pointsFrame, int acumulatePoint) {
         this.countRoll += countRoll;
         this.countFrame += countFrame;
