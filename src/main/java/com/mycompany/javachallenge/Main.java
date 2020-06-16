@@ -5,12 +5,15 @@
  */
 package com.mycompany.javachallenge;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.mycompany.javachallenge.bowling.BowlingCalculator;
+import com.mycompany.javachallenge.domain.Player;
+import com.mycompany.javachallenge.screen.ConsoleScreen;
+import com.mycompany.javachallenge.screen.Screen;
+import com.mycompany.javachallenge.screen.SeparationFormat;
+import com.mycompany.javachallenge.screen.StandardFormatPlayer;
+import com.mycompany.javachallenge.util.FileManager;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -20,37 +23,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Game game = new Game();
+        List<Player> players = FileManager.listInputs("C:\\input\\input.txt");
 
-        game.calculate();
+        players = players.stream().map(p -> {
+            BowlingCalculator bc = new BowlingCalculator();
+            p.setGame(bc.calculateGame(p.getGame()));
+            return p;
+        }).collect(Collectors.toList());
 
-        System.out.println(game.getCountRoll());
-        System.out.println("AcumulatePoints: " + game.getAcumulatePoint());
+        Screen screen = new ConsoleScreen();
+        screen.performFormat(SeparationFormat.TAB, players);
+        screen.display();
+        screen.setFormat(new StandardFormatPlayer());
+        screen.performFormat(SeparationFormat.TAB, players);
+        screen.display();
 
-        /* List<Integer> scores = new ArrayList<>(Arrays.asList(7, 43, 2, 8, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10));
-        int totalSpaces = 0;
-        int numberFrame = 0;
-
-        for (int i = 0; i < scores.size(); i++) {
-            int score = scores.get(i);
-            if (numberFrame == 9) {
-                totalSpaces++;
-            } else if (score == 10) {
-                numberFrame++;
-                totalSpaces += 2;
-            } else if (score != 10) {
-                int sumScore = scores.get(i) + scores.get(i + 1);
-                if (sumScore > 10 || sumScore < 0) {
-                    break;
-                } else {
-                    numberFrame++;
-                    totalSpaces += 2;
-                    i++;
-                }
-            }
-        }
-
-        System.out.println(totalSpaces);
-        System.out.println(numberFrame);*/
     }
 }

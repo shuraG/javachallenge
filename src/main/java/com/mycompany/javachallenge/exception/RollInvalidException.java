@@ -1,4 +1,4 @@
-package com.mycompany.javachallenge.util;
+package com.mycompany.javachallenge.exception;
 
 /**
  *
