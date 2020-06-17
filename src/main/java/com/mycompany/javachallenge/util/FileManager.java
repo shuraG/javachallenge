@@ -1,7 +1,8 @@
 package com.mycompany.javachallenge.util;
 
-import com.mycompany.javachallenge.domain.Game;
-import com.mycompany.javachallenge.domain.Player;
+
+import com.mycompany.javachallenge.game.Game;
+import com.mycompany.javachallenge.game.Player;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;

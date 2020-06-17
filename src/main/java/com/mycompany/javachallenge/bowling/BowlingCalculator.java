@@ -1,7 +1,7 @@
 package com.mycompany.javachallenge.bowling;
 
-import com.mycompany.javachallenge.domain.Game;
 import com.mycompany.javachallenge.exception.Validation;
+import com.mycompany.javachallenge.game.Game;
 
 /**
  *

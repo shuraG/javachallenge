@@ -1,6 +1,7 @@
 package com.mycompany.javachallenge.screen;
 
-import com.mycompany.javachallenge.domain.Player;
+
+import com.mycompany.javachallenge.game.Player;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.mycompany.javachallenge.domain;
+package com.mycompany.javachallenge.game;
 
 /**
  *

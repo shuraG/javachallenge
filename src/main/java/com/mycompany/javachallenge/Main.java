@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.javachallenge;
 
 import com.mycompany.javachallenge.bowling.BowlingCalculator;
-import com.mycompany.javachallenge.domain.Player;
+import com.mycompany.javachallenge.game.Player;
 import com.mycompany.javachallenge.screen.ConsoleScreen;
 import com.mycompany.javachallenge.screen.Screen;
 import com.mycompany.javachallenge.screen.SeparationFormat;
@@ -23,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Player> players = FileManager.listInputs("C:\\input\\input.txt");
+        List<Player> players = FileManager.listInputs(args[0]);
 
         players = players.stream().map(p -> {
             BowlingCalculator bc = new BowlingCalculator();
