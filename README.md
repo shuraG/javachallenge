@@ -10,7 +10,7 @@ java -jar JavaChallenge-1.0.jar "C:\input.txt"
 The param is the path or location file. In my case: C:\input.txt. So, you'll have the results.
 There is a input.txt in the root of this project.
 
-![output example](https://github.com/shuraG/javachallenge/tree/master/resources/output.gif "output example")
+![output example](https://github.com/shuraG/javachallenge/blob/master/resources/output.GIF "output example")
 
 ## Problem design and assumptions
 
