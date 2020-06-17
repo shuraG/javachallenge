@@ -6,6 +6,11 @@ package com.mycompany.javachallenge.bowling;
  */
 public class FactoryRules {
 
+    /**
+     *
+     * @param gameState it is the base decide which kind of rule, it should run.
+     * @return Rule
+     */
     public Rule createRule(GameState gameState) {
 
         Rule rule = null;

@@ -18,6 +18,14 @@ public class BowlingCalculator {
         return g;
     }
 
+    /**
+     * Calculate the results of the rolls, based on a game state, which is
+     * updated, as the rules run.
+     *
+     * @param gameState provide an initial state of the game.
+     * @return final state fame.
+     *
+     */
     private GameState calculateScore(GameState gameState) {
 
         int roll, nextRoll, nextNextroll, index;
@@ -41,6 +49,9 @@ public class BowlingCalculator {
         return gameState;
     }
 
+    /**
+     * Convert and validate a puntuation.
+     */
     private int parsePuntuation(String puntuation) {
         Validation.input(puntuation);
         return puntuation.equals("F") ? 0 : Integer.valueOf(puntuation);

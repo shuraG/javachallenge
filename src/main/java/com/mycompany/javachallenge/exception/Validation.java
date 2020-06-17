@@ -36,7 +36,7 @@ public class Validation {
             }
 
             if (numberFrame == 9 && a + b < 10 && c != 0) {
-                throw new RollInvalidException("Roll error value: You don't hava an extra roll in frame 10.");
+                throw new RollInvalidException("Roll error value: You don't have an extra roll in frame 10.");
             }
         }
 

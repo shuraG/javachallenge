@@ -10,6 +10,8 @@ java -jar JavaChallenge-1.0.jar "C:\input.txt"
 The param is the path or location file. In my case: C:\input.txt. So, you'll have the results.
 There is a input.txt in the root of this project.
 
+![output example](https://github.com/shuraG/javachallenge/tree/master/resources/output.MHT"output example")
+
 ## Problem design and assumptions
 
 The solution implement Lambdas and Streams of JAVA 8. Lambdas is use, for define diferrents rules for bowling calculator. 
@@ -25,7 +27,7 @@ Screen is based in Strategy Pattern. So we have extends from Screen a ConsoleScr
 GraphicalInterface; you only need extend from Screen abstrac class. In the other side, we have a set of Format algorithms, and all of these implement Format
 interface. Screen not depend on algorithms format.
 
-![Diagram Bowling Calculator](https://github.com/shuraG/javachallenge/tree/master/resources/diagram_screen.png "Diagram Bowling Calculator")
+![Diagram Screen](https://github.com/shuraG/javachallenge/tree/master/resources/diagram_screen.png "Diagram Screen")
 
 
 

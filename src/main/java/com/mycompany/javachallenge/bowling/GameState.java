@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * It has attributes that represent the current game state in a specific time.
+ * This atributtes will change depend on the rules executed.
  *
  * @author brayme
  */
@@ -24,7 +26,6 @@ public class GameState {
 
     public GameState() {
     }
-    
 
     public void change(int countRoll, int countFrame, int index, int pointsFrame, int acumulatePoint) {
         this.countRoll += countRoll;
