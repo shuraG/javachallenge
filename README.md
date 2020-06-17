@@ -27,7 +27,7 @@ Screen is based in Strategy Pattern. So we have extends from Screen a ConsoleScr
 GraphicalInterface; you only need extend from Screen abstrac class. In the other side, we have a set of Format algorithms, and all of these implement Format
 interface. Screen not depend on algorithms format.
 
-![Diagram Screen](https://github.com/shuraG/javachallenge/blob/master/resources/diagram_bowling_calculator.GIF "Diagram Screen")
+![Diagram Screen](https://github.com/shuraG/javachallenge/blob/master/resources/diagram_screen.GIF "Diagram Screen")
 
 
 
